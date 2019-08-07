@@ -1,3 +1,10 @@
+class Vec {
+    constructor(x = 0, y = 0) {
+        this.x = x;
+        this.y = y;
+    }
+}
+
 const canvas = document.querySelector("#pong");
 const context = canvas.getContext("2d");
 
@@ -5,6 +12,6 @@ const context = canvas.getContext("2d");
 context.fillStyle = "#000";
 context.fillRect(0, 0, canvas.clientWidth, canvas.height);
 
-// Ball color
+// Ball's color
 context.fillStyle = "#fff";
 context.fillRect(0, 0, 10, 10);
