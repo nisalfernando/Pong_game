@@ -31,12 +31,12 @@ ball.pos.y = 50;
 function update(dt) {
     ball.pos.x += ball.vel.x * dt;
     ball.pos.y += ball.vel.y * dt;
+
+    // Background color
+    context.fillStyle = "#000";
+    context.fillRect(0, 0, canvas.clientWidth, canvas.height);
+
+    // Ball's color
+    context.fillStyle = "#fff";
+    context.fillRect(ball.pos.x, ball.pos.y, ball.size.x, ball.size.y);
 }
-
-// Background color
-context.fillStyle = "#000";
-context.fillRect(0, 0, canvas.clientWidth, canvas.height);
-
-// Ball's color
-context.fillStyle = "#fff";
-context.fillRect(ball.pos.x, ball.pos.y, ball.size.x, ball.size.y);
