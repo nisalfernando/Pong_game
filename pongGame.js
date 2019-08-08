@@ -22,6 +22,10 @@ class Ball extends Rect {
 const canvas = document.querySelector("#pong");
 const context = canvas.getContext("2d");
 
+// Create the ball
+const ball = new Ball();
+console.log(ball);
+
 // Background color
 context.fillStyle = "#000";
 context.fillRect(0, 0, canvas.clientWidth, canvas.height);
