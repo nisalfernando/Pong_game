@@ -24,7 +24,8 @@ const context = canvas.getContext("2d");
 
 // Create the ball
 const ball = new Ball();
-console.log(ball);
+ball.pos.x = 100;
+ball.pos.y = 50;
 
 // Background color
 context.fillStyle = "#000";
@@ -32,4 +33,4 @@ context.fillRect(0, 0, canvas.clientWidth, canvas.height);
 
 // Ball's color
 context.fillStyle = "#fff";
-context.fillRect(0, 0, 10, 10);
+context.fillRect(ball.pos.x, ball.pos.y, ball.size.x, ball.size.y);
