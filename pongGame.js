@@ -27,6 +27,12 @@ const ball = new Ball();
 ball.pos.x = 100;
 ball.pos.y = 50;
 
+// Animate the ball
+function update(dt) {
+    ball.pos.x += ball.vel.x * dt;
+    ball.pos.y += ball.vel.y * dt;
+}
+
 // Background color
 context.fillStyle = "#000";
 context.fillRect(0, 0, canvas.clientWidth, canvas.height);
