@@ -12,6 +12,13 @@ class Rect {
     }
 }
 
+class Ball extends Rect {
+    constructor() {
+        super(10, 10);
+        this.vel = new Vec();
+    }
+}
+
 const canvas = document.querySelector("#pong");
 const context = canvas.getContext("2d");
 
