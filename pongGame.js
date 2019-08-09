@@ -44,6 +44,11 @@ function update(dt) {
     ball.pos.x += ball.vel.x * dt;
     ball.pos.y += ball.vel.y * dt;
 
+    // Bouncing the ball(x position)
+    if (ball.x < 0 || ball.x > canvas.width) {
+        ball.vel.x = -ball.vel.x;
+    }
+
     // Background color
     context.fillStyle = "#000";
     context.fillRect(0, 0, canvas.clientWidth, canvas.height);
