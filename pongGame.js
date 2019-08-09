@@ -27,6 +27,18 @@ const ball = new Ball();
 ball.pos.x = 100;
 ball.pos.y = 50;
 
+ball.vel.x = 100;
+ball.vel.y = 100;
+
+let lastTime;
+function callback(millis) {
+    if (lastTime) {
+        update((millis - lastTime) / 1000);
+    }
+    lastTime = millis;
+    requestAnimationFrame(callback);
+}
+
 // Animate the ball
 function update(dt) {
     ball.pos.x += ball.vel.x * dt;
@@ -40,3 +52,5 @@ function update(dt) {
     context.fillStyle = "#fff";
     context.fillRect(ball.pos.x, ball.pos.y, ball.size.x, ball.size.y);
 }
+
+callback();
