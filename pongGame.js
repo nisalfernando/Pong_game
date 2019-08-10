@@ -62,12 +62,12 @@ function update(dt) {
     ball.pos.y += ball.vel.y * dt;
 
     // Bouncing the ball(x position)
-    if (ball.pos.x < 0 || ball.pos.x > canvas.width) {
+    if (ball.left < 0 || ball.right > canvas.width) {
         ball.vel.x = -ball.vel.x;
     }
 
     // Bouncing the ball(y position)
-    if (ball.pos.y < 0 || ball.pos.y > canvas.height) {
+    if (ball.top < 0 || ball.bottom > canvas.height) {
         ball.vel.y = -ball.vel.y;
     }
 
