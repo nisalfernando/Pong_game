@@ -36,8 +36,14 @@ class Ball extends Rect {
     }
 }
 
+class Pong {
+    constructor(canvas) {
+        this._canvas = canvas;
+        this._context = canvas.getContext("2d");
+    }
+}
+
 const canvas = document.querySelector("#pong");
-const context = canvas.getContext("2d");
 
 // Create the ball
 const ball = new Ball();
