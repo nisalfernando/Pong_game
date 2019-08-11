@@ -41,6 +41,28 @@ class Pong {
         this._canvas = canvas;
         this._context = canvas.getContext("2d");
     }
+    update(dt) {
+        ball.pos.x += ball.vel.x * dt;
+        ball.pos.y += ball.vel.y * dt;
+
+        // Bouncing the ball(x position)
+        if (ball.left < 0 || ball.right > canvas.width) {
+            ball.vel.x = -ball.vel.x;
+        }
+
+        // Bouncing the ball(y position)
+        if (ball.top < 0 || ball.bottom > canvas.height) {
+            ball.vel.y = -ball.vel.y;
+        }
+
+        // Background color
+        context.fillStyle = "#000";
+        context.fillRect(0, 0, canvas.clientWidth, canvas.height);
+
+        // Ball's color
+        context.fillStyle = "#fff";
+        context.fillRect(ball.pos.x, ball.pos.y, ball.size.x, ball.size.y);
+    }
 }
 
 const canvas = document.querySelector("#pong");
@@ -63,27 +85,6 @@ function callback(millis) {
 }
 
 // Animate the ball
-function update(dt) {
-    ball.pos.x += ball.vel.x * dt;
-    ball.pos.y += ball.vel.y * dt;
-
-    // Bouncing the ball(x position)
-    if (ball.left < 0 || ball.right > canvas.width) {
-        ball.vel.x = -ball.vel.x;
-    }
-
-    // Bouncing the ball(y position)
-    if (ball.top < 0 || ball.bottom > canvas.height) {
-        ball.vel.y = -ball.vel.y;
-    }
-
-    // Background color
-    context.fillStyle = "#000";
-    context.fillRect(0, 0, canvas.clientWidth, canvas.height);
-
-    // Ball's color
-    context.fillStyle = "#fff";
-    context.fillRect(ball.pos.x, ball.pos.y, ball.size.x, ball.size.y);
-}
+function 
 
 callback();
