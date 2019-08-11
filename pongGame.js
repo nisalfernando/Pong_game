@@ -46,22 +46,22 @@ class Pong {
         ball.pos.y += ball.vel.y * dt;
 
         // Bouncing the ball(x position)
-        if (ball.left < 0 || ball.right > canvas.width) {
+        if (ball.left < 0 || ball.right > this._canvas.width) {
             ball.vel.x = -ball.vel.x;
         }
 
         // Bouncing the ball(y position)
-        if (ball.top < 0 || ball.bottom > canvas.height) {
+        if (ball.top < 0 || ball.bottom > this._canvas.height) {
             ball.vel.y = -ball.vel.y;
         }
 
         // Background color
-        context.fillStyle = "#000";
-        context.fillRect(0, 0, canvas.clientWidth, canvas.height);
+        this._context.fillStyle = "#000";
+        this._context.fillRect(0, 0, this._canvas.clientWidth, this._canvas.height);
 
         // Ball's color
-        context.fillStyle = "#fff";
-        context.fillRect(ball.pos.x, ball.pos.y, ball.size.x, ball.size.y);
+        this._context.fillStyle = "#fff";
+        this._context.fillRect(ball.pos.x, ball.pos.y, ball.size.x, ball.size.y);
     }
 }
 
