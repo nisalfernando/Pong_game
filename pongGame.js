@@ -59,6 +59,18 @@ class Pong {
         };
         callback();
     }
+
+    drawRect(rect) {
+        // Ball's color
+        this._context.fillStyle = "#fff";
+        this._context.fillRect(
+            rect.ball.pos.x,
+            rect.ball.pos.y,
+            rect.ball.size.x,
+            rect.ball.size.y
+        );
+    }
+
     update(dt) {
         this.ball.pos.x += this.ball.vel.x * dt;
         this.ball.pos.y += this.ball.vel.y * dt;
@@ -77,14 +89,7 @@ class Pong {
         this._context.fillStyle = "#000";
         this._context.fillRect(0, 0, this._canvas.width, this._canvas.height);
 
-        // Ball's color
-        this._context.fillStyle = "#fff";
-        this._context.fillRect(
-            this.ball.pos.x,
-            this.ball.pos.y,
-            this.ball.size.x,
-            this.ball.size.y
-        );
+        this.drawRect(this.ball);
     }
 }
 
