@@ -56,6 +56,8 @@ class Pong {
         this.ball.vel.x = 100;
         this.ball.vel.y = 100;
 
+        this.players = [new Player(), new Player()];
+
         let lastTime;
         const callback = millis => {
             if (lastTime) {
