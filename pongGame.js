@@ -75,6 +75,7 @@ class Pong {
         this._context.fillRect(0, 0, this._canvas.width, this._canvas.height);
 
         this.drawRect(this.ball);
+        this.players.forEach(player => this.drawRect(player));
     }
 
     drawRect(rect) {
