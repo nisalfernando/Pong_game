@@ -58,6 +58,10 @@ class Pong {
 
         this.players = [new Player(), new Player()];
 
+        // set the position of the boards
+        this.players[0].pos.x = 40;
+        this.players[1].pos.x = this._canvas.width - 40;
+
         let lastTime;
         const callback = millis => {
             if (lastTime) {
