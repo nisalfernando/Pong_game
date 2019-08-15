@@ -76,6 +76,10 @@ class Pong {
         callback();
     }
 
+    collide(player, ball) {
+        if (player.left < ball.right && player.right > ball.left && player.top < ball.bottom && player.bottom > ball.top) 
+    }
+
     draw() {
         // Background color
         this._context.fillStyle = "#000";
