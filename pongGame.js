@@ -109,8 +109,8 @@ class Pong {
         // Bouncing the ball(x position)
         if (this.ball.left < 0 || this.ball.right > this._canvas.width) {
             const playerId = (this.ball.vel.x < 0) | 0;
-            console.log(playerId);
-            //this.ball.vel.x = -this.ball.vel.x;
+            this.players[playerId].score++;
+            this.reset();
         }
 
         // Bouncing the ball(y position)
