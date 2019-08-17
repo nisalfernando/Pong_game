@@ -53,8 +53,8 @@ class Pong {
         this.ball.pos.x = 100;
         this.ball.pos.y = 50;
 
-        this.ball.vel.x = 100;
-        this.ball.vel.y = 100;
+        this.ball.vel.x = 300;
+        this.ball.vel.y = 300;
 
         this.players = [new Player(), new Player()];
 
@@ -101,6 +101,8 @@ class Pong {
         this._context.fillStyle = "#fff";
         this._context.fillRect(rect.left, rect.top, rect.size.x, rect.size.y);
     }
+
+    reset() {}
 
     update(dt) {
         this.ball.pos.x += this.ball.vel.x * dt;
