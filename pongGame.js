@@ -69,6 +69,8 @@ class Pong {
             requestAnimationFrame(callback);
         };
         callback();
+
+        this.reset();
     }
 
     collide(player, ball) {
