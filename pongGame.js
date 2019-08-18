@@ -107,6 +107,13 @@ class Pong {
         this.ball.vel.y = 0;
     }
 
+    start() {
+        if (this.ball.vel.x === 0 && this.ball.vel.y === 0) {
+            this.ball.vel.x = 300;
+            this.ball.vel.y = 300;
+        }
+    }
+
     update(dt) {
         this.ball.pos.x += this.ball.vel.x * dt;
         this.ball.pos.y += this.ball.vel.y * dt;
