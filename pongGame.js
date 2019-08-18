@@ -100,8 +100,8 @@ class Pong {
     }
 
     reset() {
-        this.ball.pos.x = 100;
-        this.ball.pos.y = 50;
+        this.ball.pos.x = this._canvas.width / 2;
+        this.ball.pos.y = this._canvas.height / 2;
 
         this.ball.vel.x = 300;
         this.ball.vel.y = 300;
