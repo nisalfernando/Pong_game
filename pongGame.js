@@ -157,6 +157,7 @@ class Pong {
 const canvas = document.querySelector("#pong");
 const pong = new Pong(canvas);
 
+// Event listeners
 canvas.addEventListener("mousemove", event => {
     pong.players[0].pos.y = event.offsetY;
 });
