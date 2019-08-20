@@ -90,9 +90,11 @@ class Pong {
             player.top < ball.bottom &&
             player.bottom > ball.top
         ) {
+            const len = ball.vel.len;
             ball.vel.x = -ball.vel.x;
+            ball.vel.y += 300 * (Math.random() - 0.5);
             // Increase the velocity of ball
-            ball.vel.len *= 1.05;
+            ball.vel.len = len * 1.05;
         }
     }
 
