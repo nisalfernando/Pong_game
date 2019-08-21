@@ -80,6 +80,8 @@ class Pong {
         };
         callback();
 
+        // Score numbers
+
         this.reset();
     }
 
