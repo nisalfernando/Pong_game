@@ -81,6 +81,7 @@ class Pong {
         callback();
 
         // Score numbers
+        this.CHARS_PIXEL = 10;
         this.CHARS = [
             "111101101101111",
             "010010010010010",
