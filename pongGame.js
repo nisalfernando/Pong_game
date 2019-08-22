@@ -93,7 +93,10 @@ class Pong {
             "111001001001001",
             "111101111101111",
             "111101111001111"
-        ];
+        ].map(str => {
+            const canvas = document.createElement("canvas");
+        });
+
         this.reset();
     }
 
