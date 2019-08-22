@@ -81,7 +81,7 @@ class Pong {
         callback();
 
         // Score numbers
-        this.CHARS_PIXEL = 10;
+        this.CHAR_PIXEL = 10;
         this.CHARS = [
             "111101101101111",
             "010010010010010",
@@ -95,6 +95,8 @@ class Pong {
             "111101111001111"
         ].map(str => {
             const canvas = document.createElement("canvas");
+            canvas.height = this.CHAR_PIXEL * 5;
+            canvas.width = this.CHAR_PIXEL * 3;
         });
 
         this.reset();
