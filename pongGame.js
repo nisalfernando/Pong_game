@@ -97,6 +97,8 @@ class Pong {
             const canvas = document.createElement("canvas");
             canvas.height = this.CHAR_PIXEL * 5;
             canvas.width = this.CHAR_PIXEL * 3;
+            const context = canvas.getContext("2d");
+            context.fillStyle = "#fff";
         });
 
         this.reset();
