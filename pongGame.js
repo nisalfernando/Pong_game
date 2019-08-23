@@ -99,6 +99,16 @@ class Pong {
             canvas.width = this.CHAR_PIXEL * 3;
             const context = canvas.getContext("2d");
             context.fillStyle = "#fff";
+            str.split("").forEach((fill, i) => {
+                if (fill === "1") {
+                    context.fillRect(
+                        (i % 3) * this.CHAR_PIXEL,
+                        ((i / 3) | 0) * this.CHAR_PIXEL,
+                        this.CHAR_PIXEL,
+                        this.CHAR_PIXEL
+                    );
+                }
+            });
         });
 
         this.reset();
