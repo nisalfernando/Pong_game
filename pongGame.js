@@ -109,6 +109,7 @@ class Pong {
                     );
                 }
             });
+            return canvas;
         });
 
         this.reset();
