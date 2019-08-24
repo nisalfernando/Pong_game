@@ -145,6 +145,10 @@ class Pong {
         this._context.fillRect(rect.left, rect.top, rect.size.x, rect.size.y);
     }
 
+    drawScore() {
+        const align = this._canvas.width / 3;
+    }
+
     reset() {
         this.ball.pos.x = this._canvas.width / 2;
         this.ball.pos.y = this._canvas.height / 2;
