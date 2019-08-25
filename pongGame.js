@@ -148,6 +148,9 @@ class Pong {
     drawScore() {
         const align = this._canvas.width / 3;
         const CHAR_W = this.CHAR_PIXEL * 4;
+        this.players.forEach((player, index) => {
+            const chars = player.score.toString().split("");
+        });
     }
 
     reset() {
