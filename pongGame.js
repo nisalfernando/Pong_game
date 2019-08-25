@@ -150,6 +150,9 @@ class Pong {
         const CHAR_W = this.CHAR_PIXEL * 4;
         this.players.forEach((player, index) => {
             const chars = player.score.toString().split("");
+            const offset =
+                align * (index + 1) -
+                (((CHAR_W * chars.length) / 2) * this.CHAR_PIXEL) / 2;
         });
     }
 
