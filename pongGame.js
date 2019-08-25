@@ -147,6 +147,7 @@ class Pong {
         this._context.fillRect(rect.left, rect.top, rect.size.x, rect.size.y);
     }
 
+    // Display the score numbers of each players
     drawScore() {
         const align = this._canvas.width / 3;
         const CHAR_W = this.CHAR_PIXEL * 4;
