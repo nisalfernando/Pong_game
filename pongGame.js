@@ -212,6 +212,8 @@ const pong = new Pong(canvas);
 
 // Event listeners
 canvas.addEventListener("mousemove", event => {
+    const scale = event.offsetY / event.target.getBoundingClientRect().height;
+
     pong.players[0].pos.y = event.offsetY;
 });
 
